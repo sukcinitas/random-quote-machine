@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Exo');
+@import url('https://fonts.googleapis.com/css?family=Megrim');
+
+/* two background colors that are shown on load*/
+$primary: #7b4397;
+$secondary: #d38312;
+
+/*mobile first*/
+
+* {
+  box-sizing: border-box; 
+}
+
+html, body {
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  color: rgb(255,255,255);
+}
+
+  #bg { 
+    height: 100vh;
+    overflow: auto;
+    margin: auto;
+    background-image: linear-gradient($primary, $secondary);
+    background-repeat: no-repeat; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 250px; 
+
+    h1 {
+      padding: 40px 10px;
+      font-size: 50px;
+      font-family: "Megrim", sans-serif;
+      text-decoration: underline;
+      text-align: center;
+    }
+
+    #quote-box {
+      background-color: rgba(255, 255, 255, 0.075);
+      border-radius: 70px;
+      box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.2);
+      padding: 10px;
+      max-width: 90%;
+
+      blockquote {
+        #text {
+          text-align: center;
+          padding: 10px;
+          font-family: "Exo", sans-serif;
+          font-size: 24px;
+        
+          &::before {
+            content: open-quote;
+            font-size: 50px;
+          }
+        
+          &::after {
+            content: close-quote;
+            font-size: 50px;
+          }
+        }
+        
+        footer {
+          text-align: right;
+          font-size: 20px;
+        }
+      }
+
+      #buttons {
+        padding: 40px;
+        padding-top: 20px;
+
+        #tweet-quote, #new-quote {
+          color: rgb(255,255,255);
+          padding: 10px;
+          padding-right: 30px;
+
+          &:hover {
+            font-size: 15px;
+          }
+        }
+      }
+
+
+    }
+  }
+
+@media screen and (min-width: 798px){
+  
+  #bg {
+    width: 100vw;
+    
+    h1 {
+      padding: 10px;
+      padding-bottom: 50px;
+    }
+
+    #quote-box {
+      max-width: 70%;
+      padding: 10px;
+      margin: 0 auto;
+    
+      blockquote #text {
+        font-size: 22px;  
+      }
+      blockquote footer {
+        font-size: 20px;
+      }
+      #buttons {
+        #tweet-quote, #new-quote {
+          padding-left: 30px;
+          }
+      }
+    }
+  }  
+}

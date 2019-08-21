@@ -1,33 +1,115 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Exo");
+@import url("https://fonts.googleapis.com/css?family=Megrim");
+/* two background colors that are shown on load*/
+/*mobile first*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+html, body {
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  width: 100%;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#bg {
+  height: 100vh;
+  overflow: auto;
+  margin: auto;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#7b4397), to(#d38312));
+  background-image: linear-gradient(#7b4397, #d38312);
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 250px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#bg h1 {
+  padding: 40px 10px;
+  font-size: 50px;
+  font-family: "Megrim", sans-serif;
+  text-decoration: underline;
+  text-align: center;
+}
+
+#bg #quote-box {
+  background-color: rgba(255, 255, 255, 0.075);
+  border-radius: 70px;
+  -webkit-box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.2);
+          box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  max-width: 90%;
+}
+
+#bg #quote-box blockquote #text {
+  text-align: center;
+  padding: 10px;
+  font-family: "Exo", sans-serif;
+  font-size: 24px;
+}
+
+#bg #quote-box blockquote #text::before {
+  content: open-quote;
+  font-size: 50px;
+}
+
+#bg #quote-box blockquote #text::after {
+  content: close-quote;
+  font-size: 50px;
+}
+
+#bg #quote-box blockquote footer {
+  text-align: right;
+  font-size: 20px;
+}
+
+#bg #quote-box #buttons {
+  padding: 40px;
+  padding-top: 20px;
+}
+
+#bg #quote-box #buttons #tweet-quote, #bg #quote-box #buttons #new-quote {
+  color: white;
+  padding: 10px;
+  padding-right: 30px;
+}
+
+#bg #quote-box #buttons #tweet-quote:hover, #bg #quote-box #buttons #new-quote:hover {
+  font-size: 15px;
+}
+
+@media screen and (min-width: 798px) {
+  #bg {
+    width: 100vw;
   }
-  to {
-    transform: rotate(360deg);
+  #bg h1 {
+    padding: 10px;
+    padding-bottom: 50px;
+  }
+  #bg #quote-box {
+    max-width: 70%;
+    padding: 10px;
+    margin: 0 auto;
+  }
+  #bg #quote-box blockquote #text {
+    font-size: 22px;
+  }
+  #bg #quote-box blockquote footer {
+    font-size: 20px;
+  }
+  #bg #quote-box #buttons #tweet-quote, #bg #quote-box #buttons #new-quote {
+    padding-left: 30px;
   }
 }
+/*# sourceMappingURL=App.css.map */
