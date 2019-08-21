@@ -1,4 +1,4 @@
-#Random Quote Machine
+# Random Quote Machine
 
 An app I've built several months ago, while going through FCC Frontend Libraries Projects. I was eager to try React.
 Since then I've made some changes - rewritten **CSS** in **SCSS** (for practise), made little tweaks to style, DRY'ed out code.
