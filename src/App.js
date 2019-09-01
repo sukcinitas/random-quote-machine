@@ -54,19 +54,8 @@ const quoteList = [{
   author: "Arkady and Boris Strugatsky"
   }];
 
-const bgColor = [{backgroundImage: "linear-gradient(#7b4397, #d38312)" }, 
-                  {backgroundImage: "linear-gradient(#A83279, #D38312)"
-}, 
-                  {backgroundImage: "linear-gradient(#696D7D, #6F9)"
-}, 
-                  {backgroundImage: "linear-gradient(#360033, #0b8793)"
-}, 
-                  {backgroundImage: "linear-gradient(#4b1248, #f0c27b)"
-},
-                  {backgroundImage: "linear-gradient(#403A3E, #BE5869)"
-},
-                  {backgroundImage: "linear-gradient(#333333, #e9d362)"
-}];
+//background gradient theme names
+const bgColor = ["first", "second", "third", "forth", "fifth", "sixth", "seventh"];
 
 let number, colorNumber, url;
 function getRandomNumsandUrl() {
@@ -76,7 +65,8 @@ function getRandomNumsandUrl() {
 
   return {number, colorNumber, url};
 }
-getRandomNumsandUrl(); //first quote info that is used in state
+//getting first quote info thats's used to set initial state
+getRandomNumsandUrl(); 
 
 class App extends React.Component {
   constructor(props) {
@@ -102,8 +92,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div id="bg" style={this.state.bgStyle}>
+      <div id="bg" className={this.state.bgStyle}>
+
         <h1 id="head">Random Quote Machine</h1>
+        
         <div id="quote-box">
           <blockquote>
               <p id="text">{this.state.quote}</p>
@@ -117,7 +109,8 @@ class App extends React.Component {
               <a href="#bg" role="button" id="new-quote" onClick={this.handleClick}><i className="fas fa-arrow-right fa-2x"></i></a>
             </span>
           </div>
-        </div>   
+        </div> 
+
       </div>
     )
   }

@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Exo");
 @import url("https://fonts.googleapis.com/css?family=Megrim");
-/* two background colors that are shown on load*/
 /*mobile first*/
 * {
   -webkit-box-sizing: border-box;
@@ -19,8 +18,6 @@ html, body {
   height: 100vh;
   overflow: auto;
   margin: auto;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#7b4397), to(#d38312));
-  background-image: linear-gradient(#7b4397, #d38312);
   background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,10 +41,9 @@ html, body {
 }
 
 #bg #quote-box {
-  background-color: rgba(255, 255, 255, 0.075);
+  background-color: transparent;
+  border: 10px solid white;
   border-radius: 70px;
-  -webkit-box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.2);
-          box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.2);
   padding: 10px;
   max-width: 90%;
 }
@@ -89,6 +85,45 @@ html, body {
   font-size: 15px;
 }
 
+/*============Mixin for Background Theme==========
+====================================================*/
+.first {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#7b4397), to(#d38312));
+  background-image: linear-gradient(#7b4397, #d38312);
+}
+
+.second {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#A83279), to(#D38312));
+  background-image: linear-gradient(#A83279, #D38312);
+}
+
+.third {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#696D7D), to(#6F9));
+  background-image: linear-gradient(#696D7D, #6F9);
+}
+
+.forth {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#360033), to(#0b8793));
+  background-image: linear-gradient(#360033, #0b8793);
+}
+
+.fifth {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#4b1248), to(#f0c27b));
+  background-image: linear-gradient(#4b1248, #f0c27b);
+}
+
+.sixth {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#403A3E), to(#BE5869));
+  background-image: linear-gradient(#403A3E, #BE5869);
+}
+
+.seventh {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#333333), to(#e9d362));
+  background-image: linear-gradient(#333333, #e9d362);
+}
+
+/*========Media Queries for Bigger Screens========
+====================================================*/
 @media screen and (min-width: 798px) {
   #bg {
     width: 100vw;

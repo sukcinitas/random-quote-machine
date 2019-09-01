@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Exo');
 @import url('https://fonts.googleapis.com/css?family=Megrim');
 
-/* two background colors that are shown on load*/
-$primary: #7b4397;
-$secondary: #d38312;
 
 /*mobile first*/
 
@@ -23,7 +20,6 @@ html, body {
     height: 100vh;
     overflow: auto;
     margin: auto;
-    background-image: linear-gradient($primary, $secondary);
     background-repeat: no-repeat; 
     display: flex;
     flex-direction: column;
@@ -39,9 +35,9 @@ html, body {
     }
 
     #quote-box {
-      background-color: rgba(255, 255, 255, 0.075);
+      background-color: transparent;
+      border: 10px solid white;
       border-radius: 70px;
-      box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.2);
       padding: 10px;
       max-width: 90%;
 
@@ -88,8 +84,41 @@ html, body {
     }
   }
 
+
+/*============Mixin for Background Theme==========
+====================================================*/
+
+@mixin grad($pri, $sec){
+    background-image: linear-gradient($pri, $sec);
+}
+
+.first {
+  @include grad(#7b4397, #d38312);
+}
+.second {
+  @include grad(#A83279, #D38312);
+}
+.third {
+  @include grad(#696D7D, #6F9);
+}
+.forth {
+  @include grad(#360033, #0b8793);
+}
+.fifth {
+  @include grad(#4b1248, #f0c27b);
+}
+.sixth {
+  @include grad(#403A3E, #BE5869);
+}
+.seventh {
+  @include grad(#333333, #e9d362);
+}
+
+
+/*========Media Queries for Bigger Screens========
+====================================================*/
+
 @media screen and (min-width: 798px){
-  
   #bg {
     width: 100vw;
     
