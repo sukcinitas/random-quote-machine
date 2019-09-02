@@ -16,76 +16,74 @@ html, body {
   color: rgb(255,255,255);
 }
 
-  #bg { 
-    height: 100vh;
-    overflow: auto;
-    margin: auto;
-    background-repeat: no-repeat; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 250px; 
+#bg { 
+  height: 100vh;
+  overflow: auto;
+  margin: auto;
+  background-repeat: no-repeat; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 250px; 
 
-    h1 {
-      padding: 40px 10px;
-      font-size: 50px;
-      font-family: "Megrim", sans-serif;
-      text-decoration: underline;
-      text-align: center;
-    }
-
-    #quote-box {
-      background-color: transparent;
-      border: 10px solid white;
-      border-radius: 70px;
-      padding: 10px;
-      max-width: 90%;
-
-      blockquote {
-        #text {
-          text-align: center;
-          padding: 10px;
-          font-family: "Exo", sans-serif;
-          font-size: 24px;
-        
-          &::before {
-            content: open-quote;
-            font-size: 50px;
-          }
-        
-          &::after {
-            content: close-quote;
-            font-size: 50px;
-          }
-        }
-        
-        footer {
-          text-align: right;
-          font-size: 20px;
-        }
-      }
-
-      #buttons {
-        padding: 40px;
-        padding-top: 20px;
-
-        #tweet-quote, #new-quote {
-          color: rgb(255,255,255);
-          padding: 10px;
-          padding-right: 30px;
-
-          &:hover {
-            font-size: 15px;
-          }
-        }
-      }
-
-
-    }
+  h1 {
+    padding: 40px 10px;
+    font-size: 50px;
+    font-family: "Megrim", sans-serif;
+    text-decoration: underline;
+    text-align: center;
   }
 
+  #quote-box {
+    background-color: transparent;
+    border: 10px solid white;
+    border-radius: 70px;
+    padding: 10px;
+    max-width: 90%;
 
-/*============Mixin for Background Theme==========
+    blockquote {
+      #text {
+        text-align: center;
+        padding: 10px;
+        font-family: "Exo", sans-serif;
+        font-size: 24px;
+      
+        &::before {
+          content: open-quote;
+          font-size: 50px;
+        }
+      
+        &::after {
+          content: close-quote;
+          font-size: 50px;
+        }
+      }
+      
+      footer {
+        text-align: right;
+        font-size: 20px;
+      }
+    }
+
+    #buttons {
+      padding: 40px;
+      padding-top: 20px;
+
+      #tweet-quote, #new-quote {
+        color: rgb(255,255,255);
+        padding: 10px;
+        padding-right: 30px;
+
+        &:hover {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+
+/*============Background Theme Mixin==========
 ====================================================*/
 
 @mixin grad($pri, $sec){
@@ -108,10 +106,10 @@ html, body {
   @include grad(#4b1248, #f0c27b);
 }
 .sixth {
-  @include grad(#403A3E, #BE5869);
+  @include grad(#c79081, #dfa579);
 }
 .seventh {
-  @include grad(#333333, #e9d362);
+  @include grad(#9abb4e, #57aa62);
 }
 
 
@@ -135,13 +133,15 @@ html, body {
       blockquote #text {
         font-size: 22px;  
       }
+
       blockquote footer {
         font-size: 20px;
       }
+
       #buttons {
         #tweet-quote, #new-quote {
           padding-left: 30px;
-          }
+        }
       }
     }
   }  

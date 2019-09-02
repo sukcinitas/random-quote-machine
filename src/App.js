@@ -58,15 +58,16 @@ const quoteList = [{
 const bgColor = ["first", "second", "third", "forth", "fifth", "sixth", "seventh"];
 
 let number, colorNumber, url;
-function getRandomNumsandUrl() {
+function getRandomNumsUrl() {
   number = Math.floor(Math.random() * quoteList.length);
   colorNumber = Math.floor(Math.random() * bgColor.length);
   url = "https://twitter.com/intent/tweet?text=%22" + encodeURIComponent(quoteList[number].quote) + "%22%0A- " + encodeURIComponent(quoteList[number].author);
 
   return {number, colorNumber, url};
 }
+
 //getting first quote info thats's used to set initial state
-getRandomNumsandUrl(); 
+getRandomNumsUrl(); 
 
 class App extends React.Component {
   constructor(props) {
@@ -80,14 +81,22 @@ class App extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
   
-  handleClick() {
-    getRandomNumsandUrl();
-    this.setState ({
-      quote: quoteList[number].quote,
-      author: quoteList[number].author,
-      bgStyle: bgColor[colorNumber],
-      url: url
-    })
+  componentDidMount() {
+    window.addEventListener('keydown', this.handleClick);
+ }
+
+  handleClick(e) {
+    if((e.type === "keydown" && e.code === "ArrowRight") || e.type === "click") {
+      getRandomNumsUrl();
+        this.setState ({
+          quote: quoteList[number].quote,
+          author: quoteList[number].author,
+          bgStyle: bgColor[colorNumber],
+          url: url
+        })
+    } else {
+      return;
+    } 
   }
 
   render() {
