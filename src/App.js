@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 
 const quoteList = [{
   id:1, 
