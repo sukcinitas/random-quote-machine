@@ -2,7 +2,7 @@
   "name": "quote-machine",
   "version": "1.0.0",
   "private": true,
-  "description": "",
+  "description": "An app I've built several months ago on *Codepen* (older version: https://codepen.io/pieno_usas/full/GzrVzN, improved version: https://codepen.io/pieno_usas/full/XWrzpwX), while going through *FCC* Front End Libraries Projects. I was eager to try **ReactJS**.",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js",
