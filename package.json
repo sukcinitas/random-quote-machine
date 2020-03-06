@@ -2,7 +2,7 @@
   "name": "quote-machine",
   "version": "1.0.0",
   "private": true,
-  "description": "An app I've built several months ago on *Codepen* (older version: https://codepen.io/pieno_usas/full/GzrVzN, improved version: https://codepen.io/pieno_usas/full/XWrzpwX), while going through *FCC* Front End Libraries Projects. I was eager to try **ReactJS**.",
+  "description": "An application I've built several months ago on *Codepen* (older version: https://codepen.io/pieno_usas/full/GzrVzN, improved version: https://codepen.io/pieno_usas/full/XWrzpwX), while going through *FCC* Front End Libraries Projects. I was eager to try **ReactJS**.",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js",
@@ -13,7 +13,7 @@
     "url": "git+https://github.com/sukcinitas/random-quote-machine.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "sukcinitas",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sukcinitas/random-quote-machine/issues"
@@ -25,21 +25,21 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.2",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "sass-loader": "^8.0.0",
+    "style-loader": "^1.1.3",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0",
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "css-loader": "^3.2.0",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "style-loader": "^1.0.0"
+    "react-dom": "^16.9.0"
   }
 }

@@ -1,6 +1,4 @@
-
 /*mobile first*/
-
 * {
   box-sizing: border-box; 
 }
@@ -39,11 +37,13 @@ html, body {
     max-width: 90%;
 
     blockquote {
+      margin: 7px;
+
       #text {
         text-align: center;
         padding: 10px;
         font-family: "Exo", sans-serif;
-        font-size: 24px;
+        font-size: 22px;
       
         &::before {
           content: open-quote;
@@ -58,7 +58,7 @@ html, body {
       
       footer {
         text-align: right;
-        font-size: 20px;
+        font-size: 18px;
       }
     }
 
@@ -108,7 +108,6 @@ html, body {
 .seventh {
   @include grad(#9abb4e, #57aa62);
 }
-
 
 /*========Media Queries for Bigger Screens========
 ====================================================*/
