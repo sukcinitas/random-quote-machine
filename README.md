@@ -1,7 +1,7 @@
 # Random Quote Machine
-An application I have built a while ago while going through [FCC](https://www.freecodecamp.org/) Front End Libraries Projects. I was eager to try React. App showcases a random quote from 13 I've hardcoded (no intention to use any API).
+An application I have built a while ago while going through [FCC](https://www.freecodecamp.org/) Front End Libraries Projects. I was eager to try React. The application showcases a random quote from 13 I have hardcoded (I had no intention to use any API).
 
-Since then I have made some changes - rewritten CSS in Sass (for practise), added functionality of selecting another quote on right arrow key press. I have decided to set up React development environment with Webpack, Babel (for practice as well).
+Since then I have made some changes - rewritten CSS in Sass (for practice), added functionality of selecting another quote on a right arrow key press. I have decided to set up React development environment with Webpack, Babel (for practice as well).
 
 ----
 ## Technologies
@@ -12,10 +12,10 @@ Since then I have made some changes - rewritten CSS in Sass (for practise), adde
 
 ----
 ## Functionalities
-- Get a random quote in a random background (out of 7) on button click or right arrow key press
-- Link to twitter tweet box prefilled with current quote on button click
+- Get a random quote in a random background (out of 7) on a button click or a right arrow key press.
+- Get linked to a Twitter tweet box prefilled with current quote on a button click.
 
 ----
 ## Preview
 - Preview live app [here](https://codepen.io/pieno_usas/full/XWrzpwX) 
-- or clone this repository `git clone https://github.com/sukcinitas/random-quote-machine.git`, install dependencies `npm install` and `npm start` to run webpack's dev server on [http://localhost:8080/](http://localhost:8080/)                    
+- or clone this repository `git clone https://github.com/sukcinitas/random-quote-machine.git`, install dependencies `npm install` and `npm start` to run webpack's dev server on [http://localhost:8080/](http://localhost:8080/).                    
