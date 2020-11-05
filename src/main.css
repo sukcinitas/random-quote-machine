@@ -1,0 +1,152 @@
+/*mobile first*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+#bg {
+  height: 100vh;
+  overflow: auto;
+  margin: auto;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 250px;
+}
+
+#bg h1 {
+  padding: 40px 10px;
+  font-size: 50px;
+  font-family: "Megrim", sans-serif;
+  text-decoration: underline;
+  text-align: center;
+}
+
+#bg #quote-box {
+  background-color: transparent;
+  border: 10px solid white;
+  border-radius: 70px;
+  padding: 10px;
+  max-width: 90%;
+}
+
+#bg #quote-box blockquote {
+  margin: 7px;
+}
+
+#bg #quote-box blockquote #text {
+  text-align: center;
+  padding: 10px;
+  font-family: "Exo", sans-serif;
+  font-size: 22px;
+}
+
+#bg #quote-box blockquote #text::before {
+  content: open-quote;
+  font-size: 50px;
+}
+
+#bg #quote-box blockquote footer {
+  text-align: right;
+  font-size: 18px;
+}
+
+#bg #quote-box #buttons {
+  padding: 40px;
+}
+
+#bg #quote-box #buttons #tweet-quote,
+#bg #quote-box #buttons #new-quote {
+  color: white;
+  padding: 10px;
+}
+
+#bg #quote-box #buttons #tweet-quote:hover, #bg #quote-box #buttons #tweet-quote:focus,
+#bg #quote-box #buttons #new-quote:hover,
+#bg #quote-box #buttons #new-quote:focus {
+  position: relative;
+  right: -3px;
+  top: 3px;
+  outline: none;
+}
+
+#bg #quote-box #buttons #tweet-quote {
+  padding-right: 30px;
+}
+
+/*============Background Theme Mixin==========
+====================================================*/
+.first {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#7b4397), to(#d38312));
+  background-image: linear-gradient(#7b4397, #d38312);
+}
+
+.second {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#a83279), to(#d38312));
+  background-image: linear-gradient(#a83279, #d38312);
+}
+
+.third {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#696d7d), to(#6f9));
+  background-image: linear-gradient(#696d7d, #6f9);
+}
+
+.forth {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#360033), to(#0b8793));
+  background-image: linear-gradient(#360033, #0b8793);
+}
+
+.fifth {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#4b1248), to(#f0c27b));
+  background-image: linear-gradient(#4b1248, #f0c27b);
+}
+
+.sixth {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#c79081), to(#dfa579));
+  background-image: linear-gradient(#c79081, #dfa579);
+}
+
+.seventh {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9abb4e), to(#57aa62));
+  background-image: linear-gradient(#9abb4e, #57aa62);
+}
+
+/*========Media Queries for Bigger Screens========
+====================================================*/
+@media screen and (min-width: 798px) {
+  #bg {
+    width: 100vw;
+  }
+  #bg h1 {
+    padding: 40px 10px 80px;
+  }
+  #bg #quote-box {
+    max-width: 70%;
+    padding: 30px;
+    margin: 0 auto;
+  }
+  #bg #quote-box blockquote #text {
+    font-size: 22px;
+  }
+  #bg #quote-box blockquote footer {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,25 +1,26 @@
 /*mobile first*/
 * {
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0 auto;
   padding: 0;
   height: 100%;
   width: 100%;
-  color: rgb(255,255,255);
+  color: rgb(255, 255, 255);
 }
 
-#bg { 
+#bg {
   height: 100vh;
   overflow: auto;
   margin: auto;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 250px; 
+  padding-bottom: 250px;
 
   h1 {
     padding: 40px 10px;
@@ -44,18 +45,13 @@ html, body {
         padding: 10px;
         font-family: "Exo", sans-serif;
         font-size: 22px;
-      
+
         &::before {
           content: open-quote;
           font-size: 50px;
         }
-      
-        &::after {
-          content: close-quote;
-          font-size: 50px;
-        }
       }
-      
+
       footer {
         text-align: right;
         font-size: 18px;
@@ -64,37 +60,42 @@ html, body {
 
     #buttons {
       padding: 40px;
-      padding-top: 20px;
 
-      #tweet-quote, #new-quote {
-        color: rgb(255,255,255);
+      #tweet-quote,
+      #new-quote {
+        color: rgb(255, 255, 255);
         padding: 10px;
-        padding-right: 30px;
 
-        &:hover {
-          font-size: 15px;
+        &:hover, &:focus {
+          position: relative;
+          right: -3px;
+          top: 3px;
+          outline: none;
         }
+      }
+
+      #tweet-quote {
+        padding-right: 30px;
       }
     }
   }
 }
 
-
 /*============Background Theme Mixin==========
 ====================================================*/
 
-@mixin grad($pri, $sec){
-    background-image: linear-gradient($pri, $sec);
+@mixin grad($pri, $sec) {
+  background-image: linear-gradient($pri, $sec);
 }
 
 .first {
   @include grad(#7b4397, #d38312);
 }
 .second {
-  @include grad(#A83279, #D38312);
+  @include grad(#a83279, #d38312);
 }
 .third {
-  @include grad(#696D7D, #6F9);
+  @include grad(#696d7d, #6f9);
 }
 .forth {
   @include grad(#360033, #0b8793);
@@ -112,33 +113,26 @@ html, body {
 /*========Media Queries for Bigger Screens========
 ====================================================*/
 
-@media screen and (min-width: 798px){
+@media screen and (min-width: 798px) {
   #bg {
     width: 100vw;
-    
+
     h1 {
-      padding: 10px;
-      padding-bottom: 50px;
+      padding: 40px 10px 80px;
     }
 
     #quote-box {
       max-width: 70%;
-      padding: 10px;
+      padding: 30px;
       margin: 0 auto;
-    
+
       blockquote #text {
-        font-size: 22px;  
+        font-size: 22px;
       }
 
       blockquote footer {
         font-size: 20px;
       }
-
-      #buttons {
-        #tweet-quote, #new-quote {
-          padding-left: 30px;
-        }
-      }
     }
-  }  
+  }
 }
