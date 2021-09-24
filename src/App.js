@@ -65,6 +65,10 @@ class App extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    window.removeEventListener("keydown", this.handleClick);
+  }
+
   render() {
     const { bgStyle, quote, author, url } = this.state;
     return (
